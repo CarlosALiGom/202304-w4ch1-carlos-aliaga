@@ -1,9 +1,8 @@
-import Button from "./Button/Button";
-import Info from "./Info/Info";
 import Gentlemen from "./Gentlemen/Gentlemen";
+import GentlemanStructure from "./Gentlemen/types";
 
 const App = (): JSX.Element => {
-  const gentlemen = [
+  const gentlemen: GentlemanStructure[] = [
     {
       id: 1,
       name: "Bertin Osborne",
@@ -39,7 +38,7 @@ const App = (): JSX.Element => {
   return (
     <div className="container">
       <header className="main-header">
-        <h1 className="main-title">Señores que te apuntan con el dedo</h1>
+        <h1 className="main-title">0 Señores que te apuntan con el dedo</h1>
       </header>
       <section className="controls"></section>
       <main className="main">

@@ -6,7 +6,7 @@ interface GentlemenProps {
   twitter: string;
   picture: string;
   alternativeText: string;
-  selected: true;
+  selected: boolean;
 }
 
 const Gentlemen = ({
@@ -17,18 +17,17 @@ const Gentlemen = ({
   twitter,
   picture,
   alternativeText,
-  selected,
 }: GentlemenProps): JSX.Element => {
   return (
     <>
-      <li className="gentleman">
+      <li key={id} className="gentleman">
         <div className="gentleman__avatar-container">
           <img
             className="gentleman__avatar"
             src={`img/${picture}`}
             alt={alternativeText}
           />
-          <span className="gentleman__initial">F</span>
+          <span className="gentleman__initial">{name[0]}</span>
         </div>
         <div className="gentleman__data-container">
           <h2 className="gentleman__name">{name}</h2>
