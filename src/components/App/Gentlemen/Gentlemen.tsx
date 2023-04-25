@@ -18,6 +18,12 @@ const Gentlemen = ({
   picture,
   alternativeText,
 }: GentlemenProps): JSX.Element => {
+  const getFirstLetter = (name: string): string => {
+    const nameParts = name.split(" ");
+
+    return nameParts[0].length > 3 ? nameParts[0][0] : nameParts[1][0];
+  };
+
   return (
     <>
       <li key={id} className="gentleman">
@@ -27,7 +33,7 @@ const Gentlemen = ({
             src={`img/${picture}`}
             alt={alternativeText}
           />
-          <span className="gentleman__initial">{name[0]}</span>
+          <span className="gentleman__initial">{getFirstLetter(name)}</span>
         </div>
         <div className="gentleman__data-container">
           <h2 className="gentleman__name">{name}</h2>

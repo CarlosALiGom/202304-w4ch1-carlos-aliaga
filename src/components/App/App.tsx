@@ -38,7 +38,10 @@ const App = (): JSX.Element => {
   return (
     <div className="container">
       <header className="main-header">
-        <h1 className="main-title">0 Señores que te apuntan con el dedo</h1>
+        <p className="info">0 señores que te apuntan con el dedo marcados</p>
+        <button type="button" className="button button--select">
+          Marcar todos
+        </button>
       </header>
       <section className="controls"></section>
       <main className="main">
